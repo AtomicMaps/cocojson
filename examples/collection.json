@@ -30,7 +30,7 @@
   },
   "assets": {
     "example": {
-      "href": "https://example.com/examples/file.xyz",
+      "href": "https://example.com/examples/file.xyz"
     }
   },
   "item_assets": {

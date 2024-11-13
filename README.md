@@ -33,7 +33,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | -------------------- | ------------------------- | -------------------------------------------- |
 | coco:licenses     | \[[License Object](#license-object)\]         | **REQUIRED**. Describe the required field... |
 | coco:categories         | \[[Category Object](#category-object)\] | Describe the field...                        |
-| coco:annotations | \[[Annotation Object](#annotation-object)\]    | Describe the field...                        |
+| coco:annotations | \[[Annotation Object](#annotation-object)\] | Describe the field...                        |
 
 ### Additional Field Information
 
@@ -59,7 +59,7 @@ This is the introduction for the purpose and the content of the XYZ Object...
 | ---------- | ------ | -------------------------------------------- |
 | `id`          | number | **REQUIRED**. Integer ID of the category |
 | `name`          | string | **REQUIRED**. Name of the category (e.g. 'cat') |
-| `supercategory`          | string | **REQUIRED**. General category (e.g. 'animal') |
+| `supercategory` | string | **REQUIRED**. General category (e.g. 'animal') |
 <!-- | `keypoints`          | /[string/] | List of names which keypoint coordinates represent |
 | `skeleton`          | /[/[number, number/]/] | **REQUIRED**. Describe the required field... | -->
 
@@ -73,12 +73,10 @@ This is the introduction for the purpose and the content of the XYZ Object...
 | `image_id`          | number | **REQUIRED**. Integer ID of the associated images from the 'coco:images' field |
 | `category_id`          | number | **REQUIRED**. Integer ID of the associated category from the 'coco:categories' field |
 | `bbox`          | /[number/] | **REQUIRED**. Bounding box of the annotation in pixel coordinates |
-| `segmentation`          | /[/[number, number/]/] | Segmentation mask of the annotation as a list of image coordinates |
+| `segmentation` | /[/[number, number/]/] | Segmentation mask of the annotation as a list of image coordinates |
 | `area`          | number | The area of the segmentation mask in pixels |
 | `iscrowd`          | bool | Tag indicating if the segmentation mask is of a single object or many objects in an image |
 | `score`          | number | Score 0 - 1.0 indicating the annotation confidence level |
-
-
 
 ## Contributing
 
