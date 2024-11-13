@@ -47,9 +47,9 @@ This is the introduction for the purpose and the content of the XYZ Object...
 
 | Field Name | Type   | Description                                  |
 | ---------- | ------ | -------------------------------------------- |
-| x          | number | **REQUIRED**. Describe the required field... |
-| y          | number | **REQUIRED**. Describe the required field... |
-| z          | number | **REQUIRED**. Describe the required field... |
+| `id`          | number | **REQUIRED**. Integer ID of the license |
+| `name`          | string | **REQUIRED**. License name |
+| `url`          | string | **REQUIRED**. URL to the license text |
 
 ### Category Object
 
@@ -57,9 +57,11 @@ This is the introduction for the purpose and the content of the XYZ Object...
 
 | Field Name | Type   | Description                                  |
 | ---------- | ------ | -------------------------------------------- |
-| x          | number | **REQUIRED**. Describe the required field... |
-| y          | number | **REQUIRED**. Describe the required field... |
-| z          | number | **REQUIRED**. Describe the required field... |
+| `id`          | number | **REQUIRED**. Integer ID of the category |
+| `name`          | string | **REQUIRED**. Name of the category (e.g. 'cat') |
+| `supercategory`          | string | **REQUIRED**. General category (e.g. 'animal') |
+<!-- | `keypoints`          | /[string/] | List of names which keypoint coordinates represent |
+| `skeleton`          | /[/[number, number/]/] | **REQUIRED**. Describe the required field... | -->
 
 ### Annotation Object
 
@@ -67,18 +69,16 @@ This is the introduction for the purpose and the content of the XYZ Object...
 
 | Field Name | Type   | Description                                  |
 | ---------- | ------ | -------------------------------------------- |
-| x          | number | **REQUIRED**. Describe the required field... |
-| y          | number | **REQUIRED**. Describe the required field... |
-| z          | number | **REQUIRED**. Describe the required field... |
+| `id `         | number | **REQUIRED**. Integer ID of the annotation |
+| `image_id`          | number | **REQUIRED**. Integer ID of the associated images from the 'coco:images' field |
+| `category_id`          | number | **REQUIRED**. Integer ID of the associated category from the 'coco:categories' field |
+| `bbox`          | /[number/] | **REQUIRED**. Bounding box of the annotation in pixel coordinates |
+| `segmentation`          | /[/[number, number/]/] | Segmentation mask of the annotation as a list of image coordinates |
+| `area`          | number | The area of the segmentation mask in pixels |
+| `iscrowd`          | bool | Tag indicating if the segmentation mask is of a single object or many objects in an image |
+| `score`          | number | Score 0 - 1.0 indicating the annotation confidence level |
 
-## Relation types
 
-The following types should be used as applicable `rel` types in the
-[Link Object](https://github.com/radiantearth/stac-spec/tree/master/item-spec/item-spec.md#link-object).
-
-| Type           | Description                           |
-| -------------- | ------------------------------------- |
-| fancy-rel-type | This link points to a fancy resource. |
 
 ## Contributing
 
